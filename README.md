@@ -42,7 +42,7 @@ Then to run it, execute the following in the terminal:
 $ auto-py-to-exe
 ```
 
-### Installing Via [GitHub](https://github.com/brentvollebregt/auto-py-to-exe)
+### Installing Via [GitHub](https://github.com/haoqi7/auto-py-exe)
 ```
 $ git clone https://github.com/brentvollebregt/auto-py-to-exe.git
 $ cd auto-py-to-exe
