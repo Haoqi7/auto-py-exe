@@ -3,7 +3,7 @@ from setuptools import setup
 from auto_py_to_exe import __version__ as version
 
 setup(
-    name='py-exe',
+    name='qiqiqi',
     version=version,
     url='https://github.com/haoqi7/auto-py-exe',
     license='MIT',
