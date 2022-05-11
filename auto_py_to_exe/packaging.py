@@ -89,7 +89,7 @@ def package(pyinstaller_command, options):
     """
     Call PyInstaller to package a script using provided arguments and options.
     :param pyinstaller_command: Command to supply to PyInstaller
-    :param options: auto-py-to-exe specific options for setup and cleaning up
+    :param options: auto-py-exe specific options for setup and cleaning up
     :return: Whether packaging was successful
     """
 
