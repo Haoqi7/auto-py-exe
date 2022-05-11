@@ -1,17 +1,5 @@
 # Changelog
 
-## 2.19.0
-
-🚀 Enhancements
-
-- [252](https://github.com/brentvollebregt/auto-py-to-exe/pull/252): Added French translations
-
-## 2.18.2
-
-🏠 Internal
-
-- [261](https://github.com/brentvollebregt/auto-py-to-exe/issues/261): Use latest version of Eel
-
 ## 2.18.1
 
 🐛 Bug Fixes
