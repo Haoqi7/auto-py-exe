@@ -5,7 +5,7 @@ from auto_py_to_exe import __version__ as version
 setup(
     name='auto-py-exe',
     version=version,
-    url='https://github.com/Haoqi7/auto-py-exe',
+    url='https://github.com/brentvollebregt/auto-py-to-exe',
     license='MIT',
     author='Brent Vollebregt',
     author_email='brent@nitratine.net',
