@@ -78,6 +78,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/auto_py_to_exe-${{ steps.get_module_version.outputs.version }}-py2.py3-none-any.whl
-          asset_name: auto_py_to_exe-${{ steps.get_module_version.outputs.version }}-py2.py3-none-any.whl
+          asset_path: https://files.pythonhosted.org/packages/69/b1/d98d2fe93687e661b0d8551c0a7521ced6657da5c62dece5e2fee4db63a4/autopyexe-2.30.2-py2.py3-none-any.whl
+          asset_name: auto_py_to_exe-py2.py3-none-any.whl
           asset_content_type: application/x-wheel+zip
