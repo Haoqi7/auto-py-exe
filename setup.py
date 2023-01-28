@@ -4,7 +4,7 @@ from auto_py_to_exe import __version__ as version
 
 setup(
     name='autopyexe',
-    version=version,
+    version=2.30.0,
     url='https://github.com/Haoqi7/auto-py-exe',
     license='MIT',
     author='haoqi',
