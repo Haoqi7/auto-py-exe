@@ -3,9 +3,9 @@ from setuptools import setup
 from auto_py_to_exe import __version__ as version
 
 setup(
-    name='auto-py-exe',
+    name='autoexe',
     version=version,
-    url='https://github.com/brentvollebregt/auto-py-to-exe',
+    url='https://github.com/Haoqi7/auto-py-exe',
     license='MIT',
     author='haoqi',
     author_email='w00989988@gmail.com',
