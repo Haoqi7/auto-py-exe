@@ -71,13 +71,9 @@ jobs:
           user: __token__
           password: ${{ secrets.pypi_password }}
 
-  
-      - name: Upload Binary to Release
+      - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
-        env:
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: https://files.pythonhosted.org/packages/69/b1/d98d2fe93687e661b0d8551c0a7521ced6657da5c62dece5e2fee4db63a4/autopyexe-2.30.2-py2.py3-none-any.whl
-          asset_name: auto_py_to_exe-py2.py3-none-any.whl
-          asset_content_type: application/x-wheel+zip
+          upload_url: ${{ github.event.release.upload_url }}
