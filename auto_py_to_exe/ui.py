@@ -45,7 +45,8 @@ def initialise():
         'options': packaging.get_pyinstaller_options(),
         'warnings': utils.get_warnings(),
         'pathSeparator': os.pathsep,
-        'defaultOutputFolder': config.default_output_directory
+        'defaultOutputFolder': config.default_output_directory,
+        'languageHint': config.language_hint
     }
 
 
@@ -82,6 +83,21 @@ def does_file_exist(file_path):
 def does_folder_exist(path):
     """ Checks if a folder exists """
     return os.path.isdir(path)
+
+
+@eel.expose
+def is_file_an_ico(file_path):
+    """ Checks if a file is an ico file """
+    if not os.path.isfile(file_path):
+        return None
+
+    # Open the file and read the first 4 bytes
+    with open(file_path, 'rb') as f:
+        data = f.read(4)
+        if data == b'\x00\x00\x01\x00':
+            return True
+        else:
+            return False
 
 
 @eel.expose

@@ -1,10 +1,145 @@
 # Changelog
 
+## 2.27.0
+
+🚀 Enhancements
+
+- [#346](https://github.com/brentvollebregt/auto-py-to-exe/pull/355): Added Japanese translations
+
+🐛 Bug Fixes
+
+- Fixed broken links for some translations
+
+🏆 Contributors
+
+- [NattyanTV](https://github.com/nattyan-tv)
+
+## 2.26.1
+
+🐛 Bug Fixes
+
+- [#346](https://github.com/brentvollebregt/auto-py-to-exe/pull/346): Fix Chinese translation error
+
+🏆 Contributors
+
+- [Mark Melendez](https://github.com/Melendez1209)
+
+## 2.26.0
+
+🚀 Enhancements
+
+- [#331](https://github.com/brentvollebregt/auto-py-to-exe/pull/331): Added Serbian translations
+
+🏆 Contributors
+
+- [rina](https://github.com/sweatshirts)
+
+## 2.25.0
+
+🚀 Enhancements
+
+- [#329](https://github.com/brentvollebregt/auto-py-to-exe/pull/329): Added Spanish Latam translations
+
+🏆 Contributors
+
+- [Matías Varela](https://github.com/Matyrela)
+
+## 2.24.1
+
+🚀 Enhancements
+
+- [#327](https://github.com/brentvollebregt/auto-py-to-exe/issues/327): Added support for Python 3.11
+
+## 2.24.0
+
+🚀 Enhancements
+
+- [#319](https://github.com/brentvollebregt/auto-py-to-exe/pull/319): Added Arabic translations
+
+🏆 Contributors
+
+- [ELTAYEB ALI](https://github.com/Tayeb-Ali)
+
+## 2.23.1
+
+🐛 Bug Fixes
+
+- [#306](https://github.com/brentvollebregt/auto-py-to-exe/issues/306): Move to a non-reload based configuration import to fix issues with Eel server stopping on reload
+- Fix icon input not validating after configuration import
+
+
+## 2.23.0
+
+🚀 Enhancements
+
+- [#292](https://github.com/brentvollebregt/auto-py-to-exe/pull/292): Added Greek translations
+
+🏆 Contributors
+
+- [Konstantinos](https://github.com/sofronas)
+
+## 2.22.0
+
+🚀 Enhancements
+
+- [#297](https://github.com/brentvollebregt/auto-py-to-exe/pull/297): Added Czech translations
+
+🏆 Contributors
+
+- [Matto](https://github.com/Matto58)
+
+## 2.21.1
+
+🐛 Bug Fixes
+
+- [#286](https://github.com/brentvollebregt/auto-py-to-exe/issues/290): Fixed configuration import not clearing existing values before inserting new values (now done using a reload)
+- Fixed icon path not validating after import
+
+## 2.21.0
+
+🚀 Enhancements
+
+- [#286](https://github.com/brentvollebregt/auto-py-to-exe/issues/286): Added ability to set language in cli arguments (e.g. `--language sp`)
+
+## 2.20.1
+
+🐛 Bug Fixes
+
+- Match dependencies in setup.py with requirements.txt
+
+## 2.20.0
+
+🚀 Enhancements
+
+- [#272](https://github.com/brentvollebregt/auto-py-to-exe/pull/272): Added Italian translations
+- [#274](https://github.com/brentvollebregt/auto-py-to-exe/pull/274): Added Indonesian translations
+
+🏆 Contributors
+
+- [itsEmax64](https://github.com/itsEmax64)
+- [Marvin](https://github.com/MarvinZhong)
+
+## 2.19.0
+
+🚀 Enhancements
+
+- [#252](https://github.com/brentvollebregt/auto-py-to-exe/pull/252): Added French translations
+
+🏆 Contributors
+
+- [DESPORTES](https://github.com/flaviedesp)
+
+## 2.18.2
+
+🏠 Internal
+
+- [#261](https://github.com/brentvollebregt/auto-py-to-exe/issues/261): Use latest version of Eel
+
 ## 2.18.1
 
 🐛 Bug Fixes
 
-- [259](https://github.com/brentvollebregt/auto-py-to-exe/issues/259): Fix PyInstaller 4.10 warnings
+- [#259](https://github.com/brentvollebregt/auto-py-to-exe/issues/259): Fix PyInstaller 4.10 warnings
 
 ## 2.18.0
 
@@ -38,12 +173,25 @@
 
 ## 2.15.0
 
+🚀 Enhancements
+
 - [#228](https://github.com/brentvollebregt/auto-py-to-exe/pull/228): Added German translations
-- [#231](https://github.com/brentvollebregt/auto-py-to-exe/issues/231 ): Added Brazilian Portuguese translations
+- [#231](https://github.com/brentvollebregt/auto-py-to-exe/issues/231): Added Brazilian Portuguese translations
+
+🏆 Contributors
+
+- [hebens](https://github.com/hebens)
+- [Marley Adriano](https://github.com/marleyas)
 
 ## 2.14.1
 
+🐛 Bug Fixes
+
 - [#230](https://github.com/brentvollebregt/auto-py-to-exe/pull/230): Fixed application failing to launch
+
+🏆 Contributors
+
+- [BoubouleTheCutestHamster](https://github.com/boubouleuh)
 
 ### 2.14.0
 

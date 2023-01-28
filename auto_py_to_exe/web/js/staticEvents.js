@@ -41,8 +41,17 @@ const consoleWindowOptionChange = (option) => (event) => {
 };
 
 const iconLocationChange = async (event) => {
-    colourInput(event.target, true, true, false);
+    const valid = await colourInput(event.target, true, true, false);
     updateCurrentCommandDisplay();
+
+    // If valid and a value exists, show the message if the file is not an ico file
+    const warningElement = document.getElementById('icon-invalid-warning');
+    if (valid && event.target.value !== "") {
+        const isIcoFile = await isFileAnIco(event.target.value);
+        warningElement.style.display = isIcoFile === false ? 'block' : 'none'; // isIcoFile is boolean | null
+    } else {
+        warningElement.style.display = 'none';
+    }
 };
 
 const iconLocationSearch = async (event) => {
@@ -212,12 +221,20 @@ const setupEvents = () => {
         const [val1, val2] = value.split(pathSeparator);
         addDoubleInputForSrcDst(datasListNode, 'datas', val1, val2, true, true);
     };
-    const setIcon = (value) => document.getElementById('icon-path').value = value;
+    const setIcon = (value) => {
+        document.getElementById('icon-path').value = value;
+        document.getElementById('icon-path').dispatchEvent(new Event('input'));
+    };
     configurationSetters['filenames'] = setEntryScript;
     configurationSetters['onefile'] = setOnefile;
     configurationSetters['console'] = setConsole;
     configurationSetters['datas'] = setAdditionalFile;
     configurationSetters['icon_file'] = setIcon;
+
+    configurationCleaners.push(() => setEntryScript('')); // filenames
+    configurationCleaners.push(() => setOnefile(false)); // onefile
+    configurationCleaners.push(() => setConsole(false)); // console
+    configurationCleaners.push(() => setIcon('')); // icon_file
 
     // Soft initialise (to trigger any required initial events)
     setEntryScript('');
