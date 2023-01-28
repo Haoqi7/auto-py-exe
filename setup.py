@@ -32,8 +32,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'autopyexe=auto_py_exe.__main__:run',
-            'auto-py-exe=auto_py_exe.__main__:run'
+            'autopytoexe=auto_py_to_exe.__main__:run',
+            'auto-py-to_exe=auto_py_to_exe.__main__:run'
         ],
     },
 )
