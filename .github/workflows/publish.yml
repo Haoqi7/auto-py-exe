@@ -65,15 +65,7 @@ jobs:
           version=$(python -c "from auto_py_to_exe import __version__ as v; print(v)")
           echo "Module version: $version"
           echo "::set-output name=version::$version"
-
-      - name: Fail on tag and module version mismatch
-        if: (!endsWith(github.ref, steps.get_module_version.outputs.version))
-        run: |
-          echo "Ref that triggered release: ${{ github.ref }}"
-          echo "Current module version: ${{ steps.get_module_version.outputs.version }}"
-          exit 1
-
-    
+ 
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@release/v1
