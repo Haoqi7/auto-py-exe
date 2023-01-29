@@ -34,7 +34,8 @@ jobs:
 
       - name: Get the upload_url
         uses: bruceadams/get-release@v1.3.2
-      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload a release asset
         uses: actions/upload-release-asset@v1
         env:
