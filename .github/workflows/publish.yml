@@ -67,11 +67,6 @@ jobs:
           echo "::set-output name=version::$version"
  
 
-      - name: Publish package
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_password }}
 
       - name: Create release
         id: create_release
