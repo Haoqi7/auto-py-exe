@@ -31,13 +31,25 @@ jobs:
           password: ${{ secrets.pypi_password }}
 
 
-      - name: Upload Release Asset (sdist) to GitHub
-        id: upload-release-asset
+      - name: Create a new release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v1.0.0
+          release_name: v1.0.0
+          draft: false
+          prerelease: false
+      - name: Get the upload_url
+        uses: bruceadams/get-release@v1.3.2
+      
+      - name: Upload a release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/auto_py_to_exe-${{ steps.get_module_version.outputs.version }}-py2.py3-none-any.whl
-          asset_name: auto_py_to_exe-py2.py3-none-any.whl
-          asset_content_type: application/x-wheel+zip
+         upload_url: ${{ steps.create_release.outputs.upload_url }}
+         asset_path: ./dist/auto_py_to_exe--py2.py3-none-any.whl
+         asset_name: auto_py_to_exe-py2.py3-none-any.whl
+         asset_content_type: application/x-wheel+zip
+
+   
